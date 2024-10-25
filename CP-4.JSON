@@ -1,0 +1,47 @@
+{
+  "name": "CP-4",
+  "description": "Run a disaster recovery tabletop simulation based on the provided device information, including risk level, device owner, primary and secondary sites, and function. The function dynamically adjusts the simulation based on the risk level and other provided context.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "device_name",
+      "risk_level"
+    ],
+    "properties": {
+      "function": {
+        "type": "string",
+        "description": "The function of the device, providing context about its role within the organization. Optional for all risk levels."
+      },
+      "scenario": {
+        "type": "string",
+        "description": "Optional scenario description. If not provided, the function will generate a scenario automatically based on the device information and risk level."
+      },
+      "risk_level": {
+        "enum": [
+          "low",
+          "moderate",
+          "high"
+        ],
+        "type": "string",
+        "description": "The risk level of the device, which can be 'low', 'moderate', or 'high'."
+      },
+      "device_name": {
+        "type": "string",
+        "description": "The name of the device involved in the tabletop simulation, e.g., 'Firewall', 'DNS Server', etc."
+      },
+      "device_owner": {
+        "type": "string",
+        "description": "The owner or responsible individual for the device. Required if the risk level is moderate or high."
+      },
+      "primary_site": {
+        "type": "string",
+        "description": "The primary location of the device. Required if the risk level is high."
+      },
+      "secondary_site": {
+        "type": "string",
+        "description": "The secondary or backup location of the device. Required if the risk level is high."
+      }
+    }
+  }
+}

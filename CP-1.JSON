@@ -1,0 +1,46 @@
+{
+  "name": "CP-1",
+  "description": "Guide the user in developing, documenting, and disseminating a contingency planning policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination, and compliance with applicable laws, directives, and guidelines.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "personnel_roles",
+      "contingency_policy_level",
+      "official_designate",
+      "review_frequency",
+      "trigger_events",
+      "compliance_requirements"
+    ],
+    "properties": {
+      "scenario": {
+        "type": "string",
+        "description": "Optional scenario description for the contingency planning context. If not provided, the function will guide based on the basic requirements."
+      },
+      "trigger_events": {
+        "type": "string",
+        "description": "Events that trigger a review and update of the contingency planning policy and procedures, e.g., after a significant incident, system changes, etc."
+      },
+      "personnel_roles": {
+        "type": "string",
+        "description": "Roles or personnel within the organization responsible for contingency planning, e.g., IT Manager, Security Officer, etc."
+      },
+      "review_frequency": {
+        "type": "string",
+        "description": "The frequency at which the contingency planning policy and procedures should be reviewed and updated, e.g., annually, bi-annually."
+      },
+      "official_designate": {
+        "type": "string",
+        "description": "The official designated to manage the development, documentation, and dissemination of the contingency planning policy."
+      },
+      "compliance_requirements": {
+        "type": "string",
+        "description": "Applicable laws, executive orders, directives, regulations, policies, standards, and guidelines with which the contingency planning policy must comply."
+      },
+      "contingency_policy_level": {
+        "type": "string",
+        "description": "The level at which the contingency planning policy is being developed, e.g., organization-level, mission/business process-level, system-level."
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "CP-10",
+  "description": "Guide the user through recovering and reconstituting a system to a known state within an organization-defined time period, consistent with recovery time (RTO) and recovery point (RPO) objectives after a disruption, compromise, or failure.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "disruption_type": {
+        "type": "string",
+        "description": "The type of disruption, compromise, or failure (e.g., hardware failure, cyber attack)."
+      },
+      "recovery_time_objective": {
+        "type": "string",
+        "description": "The organization-defined time period (RTO) within which the system must be recovered."
+      },
+      "recovery_point_objective": {
+        "type": "string",
+        "description": "The recovery point objective (RPO) specifying the acceptable data loss during recovery."
+      },
+      "known_state_description": {
+        "type": "string",
+        "description": "The known good state to which the system must be restored (e.g., last clean backup, verified system snapshot)."
+      },
+      "recovery_steps": {
+        "type": "string",
+        "description": "The steps required to recover and reconstitute the system to the known state."
+      },
+      "validation_process": {
+        "type": "string",
+        "description": "The process for validating that the system has been successfully restored to the known state."
+      }
+    },
+    "required": [
+      "disruption_type",
+      "recovery_time_objective",
+      "recovery_point_objective",
+      "known_state_description",
+      "recovery_steps",
+      "validation_process"
+    ]
+  }
+}

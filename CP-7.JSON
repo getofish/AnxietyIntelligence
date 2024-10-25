@@ -1,0 +1,47 @@
+{
+  "name": "CP-7",
+  "description": "Guide the user through establishing an alternate processing site, ensuring necessary agreements, equipment, and equivalent controls are in place to transfer and resume operations for essential mission functions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "system_operations",
+      "recovery_time_objective",
+      "recovery_point_objective",
+      "alternate_processing_site_location",
+      "agreements_status",
+      "equipment_and_supplies",
+      "equivalent_controls_check"
+    ],
+    "properties": {
+      "agreements_status": {
+        "type": "string",
+        "description": "The status of agreements needed to transfer and resume operations at the alternate site."
+      },
+      "system_operations": {
+        "type": "string",
+        "description": "The organization-defined system operations that need to be transferred to the alternate site."
+      },
+      "equipment_and_supplies": {
+        "type": "string",
+        "description": "The equipment and supplies required to resume operations at the alternate processing site, or contracts in place for delivery."
+      },
+      "recovery_time_objective": {
+        "type": "string",
+        "description": "The recovery time objective (RTO) within which the system operations must be transferred and resumed."
+      },
+      "recovery_point_objective": {
+        "type": "string",
+        "description": "The recovery point objective (RPO) for the alternate processing site, defining acceptable data loss tolerance."
+      },
+      "equivalent_controls_check": {
+        "type": "boolean",
+        "description": "Whether the controls at the alternate processing site have been checked and verified to be equivalent to the primary site."
+      },
+      "alternate_processing_site_location": {
+        "type": "string",
+        "description": "The location of the alternate processing site."
+      }
+    }
+  }
+}

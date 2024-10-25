@@ -1,0 +1,32 @@
+{
+  "name": "CP-6",
+  "description": "Guide the user through establishing an alternate storage site for system backup, ensuring necessary agreements and equivalent controls are in place.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "primary_site_controls",
+      "alternate_site_location",
+      "agreements_status",
+      "equivalent_controls_check"
+    ],
+    "properties": {
+      "agreements_status": {
+        "type": "string",
+        "description": "The status of agreements needed for the storage and retrieval of backup information at the alternate site."
+      },
+      "primary_site_controls": {
+        "type": "string",
+        "description": "The controls currently in place at the primary storage site."
+      },
+      "alternate_site_location": {
+        "type": "string",
+        "description": "The location of the alternate storage site where system backup information will be stored."
+      },
+      "equivalent_controls_check": {
+        "type": "boolean",
+        "description": "Whether the controls at the alternate site have been checked and verified to be equivalent to the primary site."
+      }
+    }
+  }
+}

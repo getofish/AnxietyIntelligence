@@ -1,0 +1,67 @@
+{
+  "name": "CP-2",
+  "description": "Guide the user through the development and documentation of a comprehensive system contingency plan, including essential mission functions, recovery objectives, restoration priorities, roles, and responsibilities.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "mission_functions",
+      "recovery_objectives",
+      "contingency_roles",
+      "system_restoration",
+      "contingency_information_sharing",
+      "approval_personnel",
+      "key_contingency_personnel",
+      "frequency_review",
+      "contingency_updates",
+      "lessons_learned",
+      "unauthorized_access_protection"
+    ],
+    "properties": {
+      "lessons_learned": {
+        "type": "string",
+        "description": "Incorporating lessons learned from testing, training, or actual contingency activities into the contingency plan."
+      },
+      "frequency_review": {
+        "type": "string",
+        "description": "The frequency at which the contingency plan will be reviewed and updated."
+      },
+      "contingency_roles": {
+        "type": "string",
+        "description": "Roles and responsibilities of individuals involved in the contingency plan, along with their contact information."
+      },
+      "mission_functions": {
+        "type": "string",
+        "description": "The essential mission and business functions that need to be maintained during a disruption."
+      },
+      "approval_personnel": {
+        "type": "string",
+        "description": "The organization-defined personnel or roles responsible for reviewing and approving the plan."
+      },
+      "system_restoration": {
+        "type": "string",
+        "description": "How the system will be fully restored without deteriorating the originally implemented controls."
+      },
+      "contingency_updates": {
+        "type": "string",
+        "description": "How changes in the organization, system, or environment will be incorporated into the plan."
+      },
+      "recovery_objectives": {
+        "type": "string",
+        "description": "The recovery objectives, restoration priorities, and metrics for system restoration."
+      },
+      "key_contingency_personnel": {
+        "type": "string",
+        "description": "Personnel or organizational elements responsible for contingency roles (identified by name or role)."
+      },
+      "unauthorized_access_protection": {
+        "type": "string",
+        "description": "Measures to protect the contingency plan from unauthorized disclosure or modification."
+      },
+      "contingency_information_sharing": {
+        "type": "string",
+        "description": "How contingency plan information will be shared across relevant personnel."
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "CP-3",
+  "description": "Guide the user through managing contingency training for system users, ensuring the training is consistent with assigned roles and responsibilities and is updated based on system changes and predefined schedules.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "contingency_roles",
+      "training_time_period",
+      "system_changes_trigger",
+      "training_frequency",
+      "training_update_frequency",
+      "event_triggers"
+    ],
+    "properties": {
+      "event_triggers": {
+        "type": "string",
+        "description": "The organization-defined events that will trigger a review and update of the contingency training content."
+      },
+      "contingency_roles": {
+        "type": "string",
+        "description": "The roles or responsibilities within the organization that require contingency training."
+      },
+      "training_frequency": {
+        "type": "string",
+        "description": "The organization-defined frequency for conducting regular contingency training."
+      },
+      "training_time_period": {
+        "type": "string",
+        "description": "The organization-defined time period within which users must complete contingency training after assuming a contingency role."
+      },
+      "system_changes_trigger": {
+        "type": "string",
+        "description": "The events or system changes that would require updated contingency training."
+      },
+      "training_update_frequency": {
+        "type": "string",
+        "description": "The frequency with which contingency training content will be reviewed and updated."
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "CP-8",
+  "description": "Guide the user through conducting backups for user-level, system-level, and documentation information with the proper protection for confidentiality, integrity, and availability, aligned with recovery time and point objectives.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "user_level_components": {
+        "type": "string",
+        "description": "The organization-defined system components containing user-level information to be backed up."
+      },
+      "user_backup_frequency": {
+        "type": "string",
+        "description": "The frequency at which user-level information backups must be conducted, consistent with recovery time and recovery point objectives."
+      },
+      "system_level_components": {
+        "type": "string",
+        "description": "The system components containing system-level information to be backed up."
+      },
+      "system_backup_frequency": {
+        "type": "string",
+        "description": "The frequency at which system-level information backups must be conducted, consistent with recovery time and recovery point objectives."
+      },
+      "documentation_backup_frequency": {
+        "type": "string",
+        "description": "The frequency at which system documentation backups (including security and privacy documentation) must be conducted, consistent with recovery time and recovery point objectives."
+      },
+      "confidentiality_protection": {
+        "type": "boolean",
+        "description": "Whether the backups are protected to ensure confidentiality."
+      },
+      "integrity_protection": {
+        "type": "boolean",
+        "description": "Whether the backups are protected to ensure integrity."
+      },
+      "availability_protection": {
+        "type": "boolean",
+        "description": "Whether the backups are protected to ensure availability."
+      }
+    },
+    "required": [
+      "user_level_components",
+      "user_backup_frequency",
+      "system_level_components",
+      "system_backup_frequency",
+      "documentation_backup_frequency",
+      "confidentiality_protection",
+      "integrity_protection",
+      "availability_protection"
+    ]
+  }
+}
